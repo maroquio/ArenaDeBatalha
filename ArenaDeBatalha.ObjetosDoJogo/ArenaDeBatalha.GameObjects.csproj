@@ -61,7 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Media.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Media.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>

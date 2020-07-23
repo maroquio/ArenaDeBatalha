@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Drawing;
+using System.Runtime.CompilerServices;
 
 namespace ArenaDeBatalha.ObjetosDoJogo
 {
@@ -9,11 +10,16 @@ namespace ArenaDeBatalha.ObjetosDoJogo
 
         public Player(Size bounds, Graphics graphics, List<GameObject> gameObjects) : base(bounds, graphics)
         {
-            this.Left = bounds.Width / 2 - this.Width / 2;
-            this.Top = bounds.Height - this.Height;
+            SetStartPosition();
             this.gameObjects = gameObjects;
             this.Speed = 10;
             this.Sound = Media.ExplosionLong;
+        }
+
+        public void SetStartPosition()
+        {
+            this.Left = this.Bounds.Width / 2 - this.Width / 2;
+            this.Top = this.Bounds.Height - this.Height;
         }
 
         public override Bitmap GetSprite()
